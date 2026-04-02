@@ -1,0 +1,30 @@
+---
+import '../styles/tailwind.css';
+import '../styles/theme.css';
+import '../styles/fonts.css';
+import '../styles/index.css';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Web Agency Landing Page - Creative Digital Solutions" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-background text-foreground antialiased selection:bg-primary/20 selection:text-white">
+		<div class="noise-overlay"></div>
+		<slot />
+	</body>
+</html>

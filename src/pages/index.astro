@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Header } from '../components/Header';
+import { Hero } from '../components/Hero';
+import { Philosophy } from '../components/Philosophy';
+import { Services } from '../components/Services';
+import { TechStack } from '../components/TechStack';
+import { Portfolio } from '../components/Portfolio';
+import { Pricing } from '../components/Pricing';
+import { Footer } from '../components/Footer';
+---
+
+<Layout title="Web Agency Landing Page | Creative Digital Solutions">
+	<main class="min-h-screen bg-background text-white">
+		<Header client:load />
+		<Hero client:load />
+		<Philosophy client:visible />
+		<Services client:visible />
+		<TechStack client:visible />
+		<Portfolio client:visible />
+		<Pricing client:visible />
+		<Footer client:visible />
+	</main>
+</Layout>
