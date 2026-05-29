@@ -31,65 +31,78 @@ export function TechStack() {
             transition={{ duration: 1 }}
           >
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-10 h-[1px] bg-primary" />
-              <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-primary">El Cómo</span>
+              <div className="w-10 h-[1px] bg-[#32b5ff]" />
+              <span className="text-[10px] font-mono font-bold tracking-[0.4em] uppercase text-[#32b5ff]">Arquitectura</span>
             </div>
             
-            <h2 className="text-5xl md:text-7xl font-bold text-white mb-10 leading-[0.9] tracking-tighter">
+            <h2 className="text-5xl md:text-7xl font-extrabold text-white mb-10 leading-[1] tracking-tighter">
               Cero Plantillas. <br />
-              <span className="italic text-primary font-title font-medium">Infinito Potencial.</span>
+              <span className="text-gradient-laser pb-2 inline-block">Infinito Potencial.</span>
             </h2>
 
             <div className="space-y-8 max-w-xl">
               <p className="text-gray-400 text-lg md:text-xl font-light leading-relaxed">
-                No usamos moldes genéricos. Construimos tu proyecto de forma <span className="text-white font-bold">modular</span>, permitiendo una flexibilidad total y resultados únicos.
+                No usamos moldes genéricos. Construimos tu infraestructura de forma <span className="text-white font-bold">modular</span>, permitiendo una flexibilidad total para tu lógica de negocio.
               </p>
 
-              <div className="p-8 rounded-[2rem] bg-white/[0.02] border border-white/5 border-l-primary/50 border-l-4">
-                <p className="text-white font-medium text-lg italic">
-                  "Como un Lego: estructuramos tu web desde cero para que sea escalable, editable y evolucione con tu negocio."
+              <div className="p-8 rounded-2xl glass border-l-[#32b5ff] border-l-4">
+                <p className="text-white font-mono text-[13px] leading-relaxed">
+                  "Como bloques de código: estructuramos tu ecosistema desde cero para que sea escalable, mantenible y evolucione con tu producto."
                 </p>
               </div>
             </div>
           </motion.div>
 
-          {/* Right: Visual Lego/Modular Concept */}
+          {/* Right: Visual Tech/Modular Concept */}
           <div className="relative">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1 }}
-              className="relative aspect-square flex items-center justify-center scale-75 md:scale-100"
+              className="relative aspect-square flex items-center justify-center scale-75 md:scale-100 [perspective:1000px]"
             >
-              <div className="absolute inset-0 bg-primary/10 blur-[120px] rounded-full" />
+              <div className="absolute inset-0 bg-[#32b5ff]/10 blur-[120px] rounded-full pointer-events-none" />
               
-              <div className="relative grid grid-cols-2 gap-4">
+              <motion.div 
+                className="relative grid grid-cols-2 gap-6"
+                initial={{ rotateX: 30, rotateY: -20, rotateZ: 10, scale: 0.8 }}
+                whileInView={{ rotateX: 0, rotateY: 0, rotateZ: 0, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
+              >
                 {[
-                  { icon: <Layers />, label: 'UI', color: 'text-primary' },
-                  { icon: <Cpu />, label: 'Logic', color: 'text-indigo-400' },
-                  { icon: <Database />, label: 'Data', color: 'text-emerald-400' },
-                  { icon: <Layout />, label: 'Style', color: 'text-amber-400' }
+                  { icon: <Layers />, label: 'UI', color: 'text-[#32b5ff]' },
+                  { icon: <Cpu />, label: 'Logic', color: 'text-[#ff00ff]' },
+                  { icon: <Database />, label: 'Data', color: 'text-white' },
+                  { icon: <Layout />, label: 'Style', color: 'text-gray-400' }
                 ].map((item, i) => (
                    <motion.div
                     key={i}
-                    initial={{ opacity: 0, y: 50 * (i % 2 ? 1 : -1) }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, scale: 0.5, z: -100 }}
+                    whileInView={{ opacity: 1, scale: 1, z: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: 0.2 * i, duration: 0.8, type: "spring" }}
-                    className="w-32 h-32 md:w-36 md:h-36 glass-strong rounded-3xl border border-white/10 flex flex-col items-center justify-center group hover:border-primary/50 transition-all duration-500"
+                    animate={{ y: [0, -15, 0] }}
+                    transition={{ 
+                      y: { repeat: Infinity, duration: 4, delay: i * 0.5, ease: "easeInOut" },
+                      default: { delay: 0.2 * i, duration: 0.8, type: "spring" }
+                    }}
+                    className="w-32 h-32 md:w-40 md:h-40 glass-strong rounded-2xl border border-white/5 flex flex-col items-center justify-center group hover:border-[#32b5ff]/50 transition-all duration-500 cursor-pointer relative overflow-hidden shadow-2xl bg-black/40 backdrop-blur-3xl"
                    >
-                     <div className={`${item.color} w-10 h-10 mb-2`}>{item.icon}</div>
-                     <span className="text-[10px] font-bold uppercase tracking-widest text-gray-500 opacity-50">{item.label}</span>
+                     {/* Laser Glow Effect on Hover */}
+                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-br from-[#32b5ff]/10 to-[#ff00ff]/10" />
+
+                     <div className={`${item.color} w-12 h-12 mb-3 relative z-10 group-hover:scale-110 transition-transform duration-500`}>{item.icon}</div>
+                     <span className="text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-gray-500 group-hover:text-white transition-colors relative z-10">{item.label}</span>
                      
-                     {/* Lego studs */}
-                     <div className="absolute top-2 left-1/2 -translate-x-1/2 flex gap-1 opacity-20">
-                        <div className="w-2 h-2 rounded-full bg-white" />
-                        <div className="w-2 h-2 rounded-full bg-white" />
+                     {/* Tech dots */}
+                     <div className="absolute top-4 left-1/2 -translate-x-1/2 flex gap-2 opacity-30 group-hover:opacity-100 transition-opacity duration-500 z-10">
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#32b5ff] shadow-[0_0_10px_#32b5ff]" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#ff00ff] shadow-[0_0_10px_#ff00ff]" />
                      </div>
                    </motion.div>
                 ))}
-              </div>
+              </motion.div>
             </motion.div>
           </div>
         </div>

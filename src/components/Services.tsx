@@ -19,15 +19,15 @@ function ServiceCard({ service, index }: { service: any; index: number }) {
       viewport={{ once: true }}
       transition={{ delay: index * 0.1, duration: 0.8 }}
       onMouseMove={onMouseMove}
-      className={`group relative overflow-hidden rounded-[2rem] border border-white/5 bg-white/[0.01] p-8 flex flex-col justify-between transition-all duration-500 hover:border-primary/20 ${service.className}`}
+      className={`group relative overflow-hidden rounded-2xl glass-strong border-glow p-8 flex flex-col justify-between transition-all duration-500 hover:border-[#32b5ff]/30 ${service.className}`}
     >
       <motion.div
-        className="pointer-events-none absolute -inset-px rounded-[2rem] opacity-0 transition duration-300 group-hover:opacity-100"
+        className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition duration-300 group-hover:opacity-100"
         style={{
           background: useMotionTemplate`
             radial-gradient(
               650px circle at ${mouseX}px ${mouseY}px,
-              rgba(99, 102, 241, 0.07),
+              rgba(50, 181, 255, 0.15),
               transparent 80%
             )
           `,
@@ -35,27 +35,27 @@ function ServiceCard({ service, index }: { service: any; index: number }) {
       />
       
       <div className="relative z-10">
-        <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center mb-10 border border-white/10 group-hover:border-primary/40 transition-colors duration-500">
+        <div className="w-12 h-12 bg-black/40 rounded-xl flex items-center justify-center mb-10 border border-white/5 group-hover:border-[#32b5ff]/40 transition-colors duration-500 shadow-xl">
           {service.icon}
         </div>
-        <h3 className="text-3xl font-bold text-white mb-4 font-title leading-tight">
+        <h3 className="text-2xl font-extrabold text-white mb-4 leading-tight">
           {service.title}
         </h3>
-        <p className="text-gray-500 text-sm font-light leading-relaxed mb-8 max-w-[280px] group-hover:text-gray-300 transition-colors">
+        <p className="text-gray-400 text-sm font-light leading-relaxed mb-8 max-w-[280px] group-hover:text-gray-300 transition-colors">
           {service.description}
         </p>
       </div>
 
       <div className="relative z-10 flex flex-wrap gap-2">
         {service.tags.map((tag: string) => (
-          <span key={tag} className="text-[9px] font-bold tracking-[0.2em] uppercase px-3 py-1.5 bg-white/5 rounded-lg border border-white/5 text-gray-500 group-hover:text-primary/70 transition-colors">
+          <span key={tag} className="text-[10px] font-mono font-bold tracking-[0.2em] uppercase px-3 py-1.5 bg-black/40 rounded-md border border-white/5 text-gray-500 group-hover:text-[#32b5ff] transition-colors">
             {tag}
           </span>
         ))}
       </div>
 
       <div className="absolute top-8 right-8 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-4 group-hover:translate-x-0">
-        <ArrowUpRight className="w-5 h-5 text-primary/50" />
+        <ArrowUpRight className="w-5 h-5 text-[#32b5ff]" />
       </div>
     </motion.div>
   );
@@ -64,55 +64,55 @@ function ServiceCard({ service, index }: { service: any; index: number }) {
 export function Services() {
   const services = [
     {
-      icon: <Code2 className="w-6 h-6 text-primary" />,
-      title: 'Desarrollo Web',
-      description: 'Sitios técnicos y robustos diseñados para escalar sin límites.',
-      tags: ['SITIOS WEB', 'ECOMMERCE'],
+      icon: <Code2 className="w-6 h-6 text-[#32b5ff]" />,
+      title: 'Ingeniería Web',
+      description: 'Plataformas de alta disponibilidad, rápidas y construidas con arquitecturas modernas.',
+      tags: ['NEXT.JS', 'REACT', 'ASTRO'],
       className: 'md:col-span-12 lg:col-span-8 lg:row-span-2',
     },
     {
-      icon: <Palette className="w-6 h-6 text-indigo-400" />,
-      title: 'Identidad Digital',
-      description: 'Diseño profesional que comunica autoridad y valor real.',
-      tags: ['UI/UX', 'BRANDING'],
+      icon: <Layers className="w-6 h-6 text-[#ff00ff]" />,
+      title: 'Lógica Backend',
+      description: 'APIs robustas y bases de datos optimizadas para manejar tu lógica de negocio.',
+      tags: ['NODE', 'APIS', 'DB'],
       className: 'md:col-span-6 lg:col-span-4 lg:row-span-1',
     },
     {
-      icon: <Globe className="w-6 h-6 text-emerald-400" />,
-      title: 'SEO & Visibilidad',
-      description: 'Estrategias para que tus clientes te encuentren primero.',
-      tags: ['SEO', 'AUDITORÍA'],
+      icon: <Zap className="w-6 h-6 text-white" />,
+      title: 'Performance Óptimo',
+      description: 'Auditorías de rendimiento y optimización extrema de tiempos de carga.',
+      tags: ['VITAL SIGNS', 'LCP'],
       className: 'md:col-span-6 lg:col-span-4 lg:row-span-1',
     },
     {
-      icon: <Layers className="w-6 h-6 text-amber-400" />,
-      title: 'Herramientas Pro',
-      description: 'Digitalizamos tus procesos con sistemas a medida.',
-      tags: ['CRM', 'AUTOMATIZACIÓN'],
+      icon: <Globe className="w-6 h-6 text-gray-400" />,
+      title: 'Escalabilidad Global',
+      description: 'Despliegues en el edge, listos para servir usuarios en todo el mundo sin latencia.',
+      tags: ['EDGE', 'CDN'],
       className: 'md:col-span-6 lg:col-span-6 lg:row-span-1',
     },
     {
-      icon: <Zap className="w-6 h-6 text-accent" />,
-      title: 'Lanzamiento Ágil',
-      description: 'Llevamos tu idea al mercado en tiempo récord.',
-      tags: ['MVP', 'START'],
+      icon: <Search className="w-6 h-6 text-[#32b5ff]" />,
+      title: 'Sistemas Modulares',
+      description: 'Integraciones complejas y desarrollo de módulos específicos para tu flujo de trabajo.',
+      tags: ['SAAS', 'MODULAR'],
       className: 'md:col-span-6 lg:col-span-6 lg:row-span-1',
     },
   ];
 
   return (
-    <section id="servicios" className="relative py-40 bg-[#050505] overflow-hidden">
+    <section id="servicios" className="relative py-40 bg-transparent overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Section Header */}
-        <div className="max-w-3xl mb-32">
+        <div className="max-w-4xl mb-32">
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="flex items-center gap-3 mb-8"
           >
-            <div className="w-12 h-[1px] bg-primary" />
-            <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-primary">Servicios</span>
+            <div className="w-12 h-[1px] bg-[#32b5ff]" />
+            <span className="text-[10px] font-mono font-bold tracking-[0.4em] uppercase text-[#32b5ff]">Nuestras Capacidades</span>
           </motion.div>
           
           <motion.h2 
@@ -120,9 +120,9 @@ export function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-5xl md:text-8xl font-bold text-white mb-10 leading-[0.9] tracking-tight"
+            className="text-5xl md:text-8xl font-extrabold text-white mb-10 leading-[1] tracking-tighter"
           >
-            Soluciones para <br /><span className="italic text-primary font-title font-medium">Líderes Digitales</span>
+            Soluciones para <br /><span className="text-gradient-laser pb-2 inline-block">Líderes Digitales</span>
           </motion.h2>
           
           <motion.p 
@@ -130,9 +130,9 @@ export function Services() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
-            className="text-xl text-gray-500 font-light leading-relaxed"
+            className="text-xl text-gray-400 font-light leading-relaxed max-w-2xl"
           >
-            Tecnología y diseño enfocados en convertir tu presencia digital en una ventaja competitiva real.
+            Ingeniería de software y diseño web adaptado a tu lógica de negocio. Construimos infraestructuras preparadas para el futuro.
           </motion.p>
         </div>
 

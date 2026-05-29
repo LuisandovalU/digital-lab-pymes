@@ -15,17 +15,17 @@ export function Header() {
           <div className="flex items-center justify-between transition-all duration-700 px-6 py-3 rounded-full bg-transparent">
             {/* Logo - Centered on Mobile, Left-aligned on Desktop */}
             <div className="w-full md:w-auto flex justify-center md:justify-start">
-              <div 
+              {/* <div 
                 className="flex items-center gap-3 cursor-pointer group scale-90 md:scale-100" 
                 onClick={() => handleNavClick('hero')}
               >
-                <div className="w-8 h-8 md:w-9 md:h-9 bg-primary rounded-xl flex items-center justify-center shadow-xl shadow-primary/20 group-hover:rotate-12 transition-all duration-500">
-                  <Rocket className="w-4 h-4 md:w-5 md:h-5 text-white" strokeWidth={2} />
+                <div className="w-8 h-8 md:w-9 md:h-9 bg-[#32b5ff] rounded-xl flex items-center justify-center shadow-[0_0_15px_rgba(50,181,255,0.4)] group-hover:rotate-12 transition-all duration-500">
+                  <Rocket className="w-4 h-4 md:w-5 md:h-5 text-black" strokeWidth={2.5} />
                 </div>
-                <span className="text-xl font-bold tracking-tight text-white font-title">
-                  Digital<span className="text-primary italic">Lab</span>
+                <span className="text-xl font-extrabold tracking-tight text-white">
+                  Digital<span className="text-[#32b5ff] font-extrabold">Lab</span>
                 </span>
-              </div>
+              </div> */}
             </div>
 
             {/* Desktop Navigation */}
@@ -34,18 +34,18 @@ export function Header() {
                 <button
                   key={item}
                   onClick={() => handleNavClick(item.toLowerCase())}
-                  className="text-[13px] font-medium text-gray-400 hover:text-white transition-all duration-300 relative group uppercase tracking-widest"
+                  className="text-[11px] font-mono font-bold text-gray-400 hover:text-white transition-all duration-300 relative group uppercase tracking-widest"
                 >
                   {item}
-                  <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-[1.5px] bg-primary transition-all duration-500 group-hover:w-4" />
+                  <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-[1.5px] bg-[#32b5ff] shadow-[0_0_10px_#32b5ff] transition-all duration-500 group-hover:w-full" />
                 </button>
               ))}
               <div className="w-[1px] h-4 bg-white/10 mx-2" />
               <button
                 onClick={() => handleNavClick('contacto')}
-                className="group relative px-6 py-2.5 rounded-full bg-white text-[13px] font-bold text-black hover:bg-primary hover:text-white transition-all duration-700 overflow-hidden"
+                className="group relative px-6 py-2.5 rounded-md bg-white text-[11px] font-mono font-bold text-black hover:bg-[#32b5ff] hover:shadow-[0_0_20px_rgba(50,181,255,0.5)] transition-all duration-700 overflow-hidden"
               >
-                <span className="relative z-10 uppercase tracking-wider">Inicia Proyecto</span>
+                <span className="relative z-10 uppercase tracking-widest">Inicia Proyecto</span>
               </button>
             </nav>
           </div>
@@ -73,10 +73,10 @@ export function Header() {
             <button
               key={item.id}
               onClick={() => handleNavClick(item.id)}
-              className="flex flex-col items-center gap-0.5 text-gray-500 hover:text-white transition-all duration-300"
+              className="flex flex-col items-center gap-0.5 text-gray-500 hover:text-[#32b5ff] transition-all duration-300"
             >
               <item.icon className="w-4 h-4" />
-              <span className="text-[8px] font-bold uppercase tracking-tighter">{item.label}</span>
+              <span className="text-[8px] font-mono font-bold uppercase tracking-tighter">{item.label}</span>
             </button>
           ))}
         </div>
