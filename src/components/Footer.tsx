@@ -107,8 +107,8 @@ export function Footer() {
           <div className="lg:col-span-3">
             <h3 className="text-white font-bold mb-8 uppercase text-[10px] tracking-[0.2em] font-mono opacity-80">Contacto</h3>
             <div className="space-y-6">
-              <a href="mailto:hola@digitallab.agency" className="block text-xl font-medium text-white hover:text-[#32b5ff] transition-colors duration-300 break-all">
-                hola@digitallab.agency
+              <a href="mailto:yuss207@gmail.com" className="block text-xl font-medium text-white hover:text-[#32b5ff] transition-colors duration-300 break-all">
+                yuss207@gmail.com
               </a>
               <a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noopener noreferrer" className="block text-xl font-medium text-white hover:text-[#ff00ff] transition-colors duration-300">
                 +52 56 1327 0003

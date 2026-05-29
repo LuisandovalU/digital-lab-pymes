@@ -8,7 +8,7 @@ export function Pricing() {
       name: 'Emprende',
       icon: <Zap className="w-5 h-5 text-[#ff00ff]" />,
       description: 'Arquitectura base ideal para startups y negocios que están iniciando su expansión.',
-      price: '€1,500',
+      price: '$15,000',
       features: [
         'Landing Page de Alto Rendimiento',
         'Arquitectura Jamstack / SSR',
@@ -23,7 +23,7 @@ export function Pricing() {
       name: 'Escala',
       icon: <Building2 className="w-5 h-5 text-white" />,
       description: 'Infraestructura robusta para empresas que requieren lógica avanzada y escalabilidad.',
-      price: '€4,500',
+      price: '$20,000',
       features: [
         'Ecosistema Web Multi-Ruta',
         'Panel de Administración (Headless CMS)',
@@ -65,7 +65,7 @@ export function Pricing() {
             transition={{ delay: 0.4 }}
             className="text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed"
           >
-            Arquitecturas escalables diseñadas para procesar de forma eficiente la lógica de tu negocio y potenciar tus resultados.
+            Nos ajustamos a tus necesidades y a tu bolsillo. Ponte en contacto con nosotros.
           </motion.p>
         </div>
 
