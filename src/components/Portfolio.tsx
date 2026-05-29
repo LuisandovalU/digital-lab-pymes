@@ -22,7 +22,11 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
       <div className="relative overflow-hidden rounded-[2rem] glass border-glow transition-all duration-700 group-hover:border-[#32b5ff]/30">
         {/* Image Container */}
         <div className={`relative overflow-hidden ${index % 3 === 0 ? 'h-[600px]' : 'h-[500px]'}`}>
-          <div className="absolute inset-0 bg-[#000000]/60 group-hover:bg-transparent transition-colors duration-700 z-10" />
+          {/* Base Overlay */}
+          <div className="absolute inset-0 bg-[#000000]/60 group-hover:bg-[#000000]/10 transition-colors duration-700 z-10" />
+          
+          {/* Text Protection Gradient (shows on hover) */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10" />
           
           {/* Performance Optimized Native Image */}
           <motion.img 
@@ -37,7 +41,7 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
           
           {/* Top Info */}
           <div className="absolute top-10 left-10 z-20 flex justify-between w-[calc(100%-80px)]">
-            <span className="px-5 py-2 rounded-md bg-black/60 backdrop-blur-xl border border-white/10 text-[10px] font-mono font-bold tracking-[0.2em] uppercase text-white">
+            <span className="px-5 py-2 rounded-md bg-black/60 backdrop-blur-xl border border-white/10 text-[10px] font-mono font-bold tracking-[0.2em] uppercase text-white shadow-lg">
               {project.category}
             </span>
             <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-md bg-white text-black flex items-center justify-center opacity-0 group-hover:opacity-100 -translate-y-4 group-hover:translate-y-0 transition-all duration-500 shadow-2xl pointer-events-auto">
@@ -47,11 +51,13 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
 
           {/* Title on Image (Bottom) */}
           <div className="absolute bottom-10 left-10 z-20 max-w-lg">
-             <h3 className="text-4xl md:text-5xl font-extrabold text-white mb-2 leading-tight">
+             <h3 className="text-4xl md:text-5xl font-extrabold text-white mb-3 leading-tight drop-shadow-xl">
                 {project.title}
              </h3>
-             <p className="text-gray-300 text-sm font-light opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                {project.description}
+             <p className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100 translate-y-2 group-hover:translate-y-0 drop-shadow-md">
+                <span className="bg-black/60 backdrop-blur-md px-4 py-2 rounded-lg inline-block border border-white/10">
+                  {project.description}
+                </span>
              </p>
           </div>
         </div>
