@@ -110,6 +110,26 @@ export function Portfolio() {
         { icon: <TrendingUp className="w-4 h-4" />, label: 'Web App' },
       ],
     },
+    {
+      title: 'Luis Sandoval Dev',
+      category: 'Link in Bio',
+      description: 'Centro de enlaces y redes sociales centralizado.',
+      image: 'https://image.thum.io/get/width/1200/crop/800/https://www.luisandoval.dev/',
+      link: 'https://www.luisandoval.dev/',
+      results: [
+        { icon: <ArrowUpRight className="w-4 h-4" />, label: 'Social Hub' },
+      ],
+    },
+    {
+      title: 'Campus Maxi Programa',
+      category: 'E-Learning',
+      description: 'Plataforma de cursos y capacitación online.',
+      image: 'https://image.thum.io/get/width/1200/crop/800/https://campusmaxiprograma.com/login/index.php?loginredirect=1',
+      link: 'https://campusmaxiprograma.com/login/index.php?loginredirect=1',
+      results: [
+        { icon: <Clock className="w-4 h-4" />, label: 'LMS Platform' },
+      ],
+    },
   ];
 
   return (
