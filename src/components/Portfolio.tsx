@@ -40,9 +40,9 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
             <span className="px-5 py-2 rounded-md bg-black/60 backdrop-blur-xl border border-white/10 text-[10px] font-mono font-bold tracking-[0.2em] uppercase text-white">
               {project.category}
             </span>
-            <div className="w-12 h-12 rounded-md bg-white text-black flex items-center justify-center opacity-0 group-hover:opacity-100 -translate-y-4 group-hover:translate-y-0 transition-all duration-500 shadow-2xl">
+            <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-md bg-white text-black flex items-center justify-center opacity-0 group-hover:opacity-100 -translate-y-4 group-hover:translate-y-0 transition-all duration-500 shadow-2xl pointer-events-auto">
               <ArrowUpRight className="w-6 h-6" />
-            </div>
+            </a>
           </div>
 
           {/* Title on Image (Bottom) */}
@@ -75,31 +75,33 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
 export function Portfolio() {
   const cases = [
     {
-      title: 'E-commerce Pro',
-      category: 'E-commerce',
-      description: 'Plataforma de ventas optimizada para conversión y escalabilidad.',
-      image: 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1600',
+      title: 'ICI México',
+      category: 'Institucional',
+      description: 'Sitio web principal para el Instituto de Capacitación Inmobiliaria.',
+      image: 'https://image.thum.io/get/width/1200/crop/800/https://www.icimexico.org/',
+      link: 'https://www.icimexico.org/',
       results: [
-        { icon: <TrendingUp className="w-4 h-4" />, label: '+320% Ventas' },
-        { icon: <Clock className="w-4 h-4" />, label: '0.8s LCP' },
+        { icon: <TrendingUp className="w-4 h-4" />, label: 'Sitio Web' },
       ],
     },
     {
-      title: 'SaaS Dashboard',
-      category: 'Software',
-      description: 'Panel de control intuitivo para la gestión de datos empresariales.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600',
+      title: 'Conferencia ICI',
+      category: 'Evento',
+      description: 'Landing page para la conferencia anual de mujeres inmobiliarias.',
+      image: 'https://image.thum.io/get/width/1200/crop/800/https://conferencia.icimexico.org/',
+      link: 'https://conferencia.icimexico.org/',
       results: [
-        { icon: <ShoppingCart className="w-4 h-4" />, label: '+85% Eficiencia' },
+        { icon: <Clock className="w-4 h-4" />, label: 'Landing Page' },
       ],
     },
     {
-      title: 'Identidad Visual AI',
-      category: 'Branding',
-      description: 'Suite de identidad digital impulsada por inteligencia artificial.',
-      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1600',
+      title: 'Cobalt Tools',
+      category: 'Herramienta Web',
+      description: 'Plataforma de herramientas y utilidades en línea.',
+      image: 'https://image.thum.io/get/width/1200/crop/800/https://cobalt.tools/',
+      link: 'https://cobalt.tools/',
       results: [
-        { icon: <TrendingUp className="w-4 h-4" />, label: '+180% Leads' },
+        { icon: <TrendingUp className="w-4 h-4" />, label: 'Web App' },
       ],
     },
   ];

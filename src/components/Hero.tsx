@@ -68,32 +68,16 @@ export function Hero() {
           </motion.div>
 
           {/* Vercel Style Headline */}
-          <h1 className="text-5xl md:text-8xl lg:text-[100px] font-extrabold mb-8 md:mb-10 leading-[1.1] md:leading-[1] tracking-tighter w-full max-w-5xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              transition={{ duration: 0.8, ease: [0.2, 0.65, 0.3, 0.9] }}
-              className="text-white"
-            >
-              Arquitectura.
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              transition={{ duration: 0.8, delay: 0.1, ease: [0.2, 0.65, 0.3, 0.9] }}
-              className="text-white"
-            >
-              Lógica.
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              transition={{ duration: 0.8, delay: 0.2, ease: [0.2, 0.65, 0.3, 0.9] }}
-              className="text-gradient-laser pb-2"
-            >
-              Aplicaciones a Medida.
-            </motion.div>
-          </h1>
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-5xl md:text-8xl lg:text-[100px] font-extrabold mb-8 md:mb-10 leading-[1.1] md:leading-[1] tracking-tighter w-full max-w-5xl text-white"
+          >
+            Arquitectura. <br />
+            Lógica. <br />
+            <span className="text-gradient-laser pb-2 inline-block">Aplicaciones a Medida.</span>
+          </motion.h1>
 
           {/* Subtitle */}
           <motion.p 
