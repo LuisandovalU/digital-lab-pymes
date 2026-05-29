@@ -83,7 +83,7 @@ export function Portfolio() {
     {
       title: 'ICI México',
       category: 'Institucional',
-      description: 'Sitio web principal para el Instituto de Capacitación Inmobiliaria.',
+      description: 'Sitio web oficial de la Iglesia Cristiana Internacional en México.',
       image: 'https://image.thum.io/get/width/1200/crop/800/https://www.icimexico.org/',
       link: 'https://www.icimexico.org/',
       results: [
@@ -91,9 +91,9 @@ export function Portfolio() {
       ],
     },
     {
-      title: 'Conferencia ICI',
+      title: 'Conferencia Mujeres',
       category: 'Evento',
-      description: 'Landing page para la conferencia anual de mujeres inmobiliarias.',
+      description: 'Landing page para la conferencia anual de mujeres de ICI.',
       image: 'https://image.thum.io/get/width/1200/crop/800/https://conferencia.icimexico.org/',
       link: 'https://conferencia.icimexico.org/',
       results: [
