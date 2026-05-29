@@ -130,6 +130,16 @@ export function Portfolio() {
         { icon: <Clock className="w-4 h-4" />, label: 'LMS Platform' },
       ],
     },
+    {
+      title: 'FightStats',
+      category: 'Data Analytics',
+      description: 'Plataforma de análisis de datos y predicciones para MMA basada en el algoritmo Nivarax.',
+      image: 'https://image.thum.io/get/width/1200/crop/800/https://fightstats.org/',
+      link: 'https://fightstats.org/',
+      results: [
+        { icon: <TrendingUp className="w-4 h-4" />, label: 'MMA Algorithm' },
+      ],
+    },
   ];
 
   return (
