@@ -81,26 +81,6 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
 export function Portfolio() {
   const cases = [
     {
-      title: 'ICI México',
-      category: 'Institucional',
-      description: 'Sitio web oficial de la Iglesia Cristiana Internacional en México.',
-      image: 'https://image.thum.io/get/width/1200/crop/800/https://www.icimexico.org/',
-      link: 'https://www.icimexico.org/',
-      results: [
-        { icon: <TrendingUp className="w-4 h-4" />, label: 'Sitio Web' },
-      ],
-    },
-    {
-      title: 'Conferencia Mujeres',
-      category: 'Evento',
-      description: 'Landing page para la conferencia anual de mujeres de ICI.',
-      image: 'https://image.thum.io/get/width/1200/crop/800/https://conferencia.icimexico.org/',
-      link: 'https://conferencia.icimexico.org/',
-      results: [
-        { icon: <Clock className="w-4 h-4" />, label: 'Landing Page' },
-      ],
-    },
-    {
       title: 'Cobalt Tools',
       category: 'Herramienta Web',
       description: 'Plataforma de herramientas y utilidades en línea.',
